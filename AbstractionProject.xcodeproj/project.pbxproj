@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B9CFC59B21B96BEC007C89BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFC59A21B96BEC007C89BB /* AppDelegate.swift */; };
-		B9CFC59D21B96BEC007C89BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFC59C21B96BEC007C89BB /* ViewController.swift */; };
-		B9CFC5A021B96BED007C89BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CFC59E21B96BED007C89BB /* Main.storyboard */; };
 		B9CFC5A221B96BF5007C89BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9CFC5A121B96BF5007C89BB /* Assets.xcassets */; };
-		B9CFC5A521B96BF5007C89BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CFC5A321B96BF5007C89BB /* LaunchScreen.storyboard */; };
+		B9CFC5A521B96BF5007C89BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CFC5A321B96BF5007C89BB /* Main.storyboard */; };
+		B9CFC5B021B96D43007C89BB /* AbstractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CFC5AF21B96D43007C89BB /* AbstractionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B9CFC59721B96BEC007C89BB /* AbstractionProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbstractionProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CFC59A21B96BEC007C89BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9CFC59C21B96BEC007C89BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B9CFC59F21B96BED007C89BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9CFC5A121B96BF5007C89BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B9CFC5A421B96BF5007C89BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9CFC5A421B96BF5007C89BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9CFC5A621B96BF5007C89BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9CFC5AF21B96D43007C89BB /* AbstractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +52,37 @@
 		B9CFC59921B96BEC007C89BB /* AbstractionProject */ = {
 			isa = PBXGroup;
 			children = (
-				B9CFC59A21B96BEC007C89BB /* AppDelegate.swift */,
-				B9CFC59C21B96BEC007C89BB /* ViewController.swift */,
-				B9CFC59E21B96BED007C89BB /* Main.storyboard */,
-				B9CFC5A121B96BF5007C89BB /* Assets.xcassets */,
-				B9CFC5A321B96BF5007C89BB /* LaunchScreen.storyboard */,
-				B9CFC5A621B96BF5007C89BB /* Info.plist */,
+				B9CFC5AD21B96C24007C89BB /* Resources */,
+				B9CFC5AE21B96C30007C89BB /* Controller */,
+				B9CFC5AC21B96C13007C89BB /* View */,
 			);
 			path = AbstractionProject;
+			sourceTree = "<group>";
+		};
+		B9CFC5AC21B96C13007C89BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9CFC5A321B96BF5007C89BB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9CFC5AD21B96C24007C89BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9CFC59A21B96BEC007C89BB /* AppDelegate.swift */,
+				B9CFC5A121B96BF5007C89BB /* Assets.xcassets */,
+				B9CFC5A621B96BF5007C89BB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9CFC5AE21B96C30007C89BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B9CFC5AF21B96D43007C89BB /* AbstractionViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +143,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9CFC5A521B96BF5007C89BB /* LaunchScreen.storyboard in Resources */,
+				B9CFC5A521B96BF5007C89BB /* Main.storyboard in Resources */,
 				B9CFC5A221B96BF5007C89BB /* Assets.xcassets in Resources */,
-				B9CFC5A021B96BED007C89BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,28 +155,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9CFC59D21B96BEC007C89BB /* ViewController.swift in Sources */,
 				B9CFC59B21B96BEC007C89BB /* AppDelegate.swift in Sources */,
+				B9CFC5B021B96D43007C89BB /* AbstractionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B9CFC59E21B96BED007C89BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9CFC59F21B96BED007C89BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B9CFC5A321B96BF5007C89BB /* LaunchScreen.storyboard */ = {
+		B9CFC5A321B96BF5007C89BB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B9CFC5A421B96BF5007C89BB /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UKS56S33P;
-				INFOPLIST_FILE = AbstractionProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AbstractionProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UKS56S33P;
-				INFOPLIST_FILE = AbstractionProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AbstractionProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
